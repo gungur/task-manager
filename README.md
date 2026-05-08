@@ -1,137 +1,181 @@
-Task Manager API (Spring Boot Microservices Project)
+# Task Manager API (Spring Boot Project)
 
-A backend-focused Task Management system built using Core Java and Spring Boot, designed to demonstrate production-style backend engineering practices including RESTful API design, layered architecture, unit testing, and database integration.
+A backend-focused Task Management system built using **Java and Spring Boot**, designed to demonstrate enterprise-style backend engineering skills including REST APIs, layered architecture, testing, and database integration.
 
-This project is actively being developed as part of my preparation for enterprise backend roles focused on Spring Boot microservices, scalable API design, and cloud-ready applications.
+This project is actively being developed to reflect real-world backend engineering practices used in enterprise environments such as **Spring Boot microservices development, API design, and scalable system architecture**.
 
-🚀 Project Overview
+---
 
-This project simulates a real-world task management backend system where users can create, update, delete, and track tasks.
+## 🚀 Project Overview
 
-It is designed with enterprise-style backend architecture principles in mind, focusing on:
+This system allows users to manage tasks through a RESTful API. It demonstrates how backend services are structured in production-grade Java applications.
 
-Clean separation of concerns
-Scalable REST API design
-Testable service layer logic
-Database-backed persistence
-Cloud-ready deployment structure (Docker-ready)
+Key focus areas include:
+- Clean architecture (Controller → Service → Repository)
+- RESTful API design principles
+- Unit testing and mocking
+- SQL-based persistence
+- Cloud-ready backend structure
 
-The goal is to reflect the kind of backend engineering work commonly done in enterprise digital transformation environments like Cognizant Enterprise Platform Services (EPS).
+---
 
-🧠 Key Features
-Create, update, delete, and retrieve tasks (CRUD operations)
-RESTful API design following HTTP best practices
-Layered architecture (Controller → Service → Repository)
-Input validation and exception handling
-In-memory / SQL-based persistence (expandable to PostgreSQL/MySQL)
-Unit testing with JUnit
-Mock-based testing using Mockito
-Clean and maintainable code structure
-🛠️ Tech Stack
-Backend
-Java (Core Java, OOP principles)
-Spring Boot
-Spring Web (REST APIs)
-Spring Data JPA (data persistence)
-Database
-SQL (H2 / PostgreSQL-ready design)
-Testing
-JUnit 5
-Mockito
-DevOps / Tools
-Git & GitHub (version control)
-Docker (containerization-ready)
-Maven (build tool)
-Postman (API testing)
-GitHub Actions (CI/CD - planned/in progress)
-🏗️ Architecture
+## 🧠 Key Features
 
-This project follows a layered architecture commonly used in enterprise Spring Boot applications:
+- Create, read, update, and delete tasks (CRUD operations)
+- RESTful API endpoints following HTTP standards
+- Layered Spring Boot architecture
+- Input validation and error handling
+- JUnit + Mockito test coverage
+- SQL database integration (H2/PostgreSQL-ready)
 
-Controller Layer   → Handles REST API requests
-Service Layer      → Business logic
-Repository Layer   → Data access abstraction
-Database Layer     → SQL-based persistence
-Design Principles Used:
-SOLID principles
-Separation of concerns
-Dependency Injection (Spring IoC)
-RESTful API conventions
-📡 API Endpoints (Sample)
-Task Operations
-GET /api/tasks → Get all tasks
-GET /api/tasks/{id} → Get task by ID
-POST /api/tasks → Create new task
-PUT /api/tasks/{id} → Update task
-DELETE /api/tasks/{id} → Delete task
-🧪 Testing Strategy
+---
 
-This project emphasizes test-driven backend development practices:
+## 🛠️ Tech Stack
 
-Unit tests for service layer using JUnit 5
-Mocking dependencies using Mockito
-Controller-level API testing (in progress)
+### Backend
+- Java (Core Java, OOP)
+- Spring Boot
+- Spring Web (REST APIs)
+- Spring Data JPA
 
-Example focus areas:
+### Database
+- SQL (H2 / PostgreSQL-ready design)
 
-Business logic correctness
-Edge cases handling
-Service-repository interaction validation
-📦 Running the Project
-Prerequisites
-Java 17+
-Maven
-Git
-Steps
+### Testing
+- JUnit 5
+- Mockito
+
+### Tools
+- Maven
+- Git & GitHub
+- Postman
+- Docker (in progress)
+- GitHub Actions (CI/CD planned)
+
+---
+
+## 🏗️ Architecture
+
+This project follows a standard enterprise layered architecture:
+
+Controller Layer → Handles HTTP requests  
+Service Layer → Business logic  
+Repository Layer → Database access  
+Database Layer → SQL persistence  
+
+### Design Principles Used:
+- Separation of concerns
+- Dependency Injection (Spring IoC)
+- SOLID principles
+- RESTful conventions
+
+---
+
+## 📡 API Endpoints
+
+### Task Operations
+
+- GET /api/tasks → Get all tasks  
+- GET /api/tasks/{id} → Get task by ID  
+- POST /api/tasks → Create new task  
+- PUT /api/tasks/{id} → Update task  
+- DELETE /api/tasks/{id} → Delete task  
+
+---
+
+## 🧪 Testing Strategy
+
+This project emphasizes backend testing practices used in enterprise environments:
+
+- Unit testing with JUnit 5
+- Mocking dependencies using Mockito
+- Service-layer validation
+- Edge case handling
+
+---
+
+## 📦 Running the Project
+
+### Prerequisites
+- Java 17+
+- Maven
+- Git
+
+### Steps to run locally:
+
+```bash
 git clone https://github.com/your-username/task-manager-api.git
 cd task-manager-api
 mvn spring-boot:run
-
-API will start at:
+```
+Application runs at:
 
 http://localhost:8080
-🐳 Docker (Planned / In Progress)
 
-This project is being extended to include containerization using Docker:
+---
 
-Dockerfile setup for Spring Boot app
-Image-based deployment for consistency across environments
-Preparation for cloud deployment (AWS/GCP-ready structure)
-🔄 CI/CD (Planned)
+## 🐳 Docker (In Progress)
 
-Planned integration using GitHub Actions:
+- Dockerfile setup for containerized Spring Boot application  
+- Consistent environment execution across systems  
+- Preparation for cloud deployment (AWS/GCP-ready structure)
 
-Automated build pipeline
-Unit test execution on push
-Docker image build workflow
-☁️ Cloud Readiness
+---
 
-The project is being structured with cloud deployment in mind:
+## 🔄 CI/CD (Planned)
 
-Stateless REST API design
-Environment-based configuration
-Containerization support (Docker)
-Future deployment target: AWS / GCP
-📌 Why This Project Matters
+- GitHub Actions pipeline for automated builds  
+- Automated unit testing on every push  
+- Docker image build and deployment workflow  
+- Foundation for enterprise-grade DevOps practices
 
-This project is intentionally aligned with enterprise backend expectations such as:
+---
 
-Spring Boot microservices development
-REST API design and integration
-Unit testing with JUnit/Mockito
-SQL-based persistence design
-Git-based collaboration workflow
-Exposure to CI/CD and containerization concepts
+## ☁️ Cloud Readiness
 
-It directly reflects the kind of work done in enterprise digital engineering teams like Cognizant EPS, where scalable backend services and fast delivery cycles are key.
+This project is being designed with cloud-native principles in mind:
 
-🔮 Future Improvements
-Migration to full microservices architecture
-PostgreSQL production setup
-JWT authentication & Spring Security
-Kafka/RabbitMQ event-driven messaging
-Kubernetes deployment
-Swagger API documentation
-👨‍💻 Author
+- Stateless REST API design
+- Environment-based configuration management
+- Dockerized deployment support
+- Scalable architecture suitable for AWS / GCP / Azure deployment
 
-Built by a Computer Science graduate actively developing enterprise-ready backend engineering skills in Java + Spring Boot ecosystem, with a focus on scalable system design and real-world software engineering practices.
+---
+
+## 📌 Why This Project Matters
+
+This project is intentionally aligned with enterprise backend engineering roles such as **Cognizant Enterprise Platform Services (EPS)**.
+
+It demonstrates practical understanding of:
+
+- Spring Boot microservices development
+- REST API design and implementation
+- Unit testing with JUnit and Mockito
+- SQL-based data persistence
+- Git-based version control workflows
+- Early-stage CI/CD and Docker exposure
+
+It reflects the kind of backend engineering work commonly performed in enterprise digital transformation teams.
+
+---
+
+## 🔮 Future Improvements
+
+- Break into microservices architecture
+- PostgreSQL production database migration
+- Spring Security + JWT authentication
+- Kafka / RabbitMQ event-driven messaging
+- Kubernetes deployment (orchestration layer)
+- Swagger / OpenAPI documentation for API contracts
+
+---
+
+## 👨‍💻 Author
+
+Computer Science graduate actively building enterprise-ready backend systems using Java and Spring Boot.
+
+Focused on:
+- Scalable backend architecture
+- Clean code principles
+- Real-world production engineering practices
+- Preparing for enterprise backend roles (Spring Boot / Microservices)
